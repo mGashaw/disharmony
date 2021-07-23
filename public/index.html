@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Secret Messaging App</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script defer src="/__/firebase/8.7.1/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.7.1/firebase-database.js"></script>
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <script src="js/writeMessage.js"></script>
+  </head>
+
+  <body>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <p class="title is-2 has-text-centered">
+          Disharmony
+        </p>
+      </div>
+    </section>
+    <section class="hero is-halfheight">
+      <div class="hero-body has-text-centered">
+        <div class="login">
+          <form action="javascript:void(0);">
+            <div class="field">
+              <div class="control">
+                <input class="input is-medium" type="text" id="name" placeholder="Enter a name" required/>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <input
+                  class="input is-medium"
+                  type="text"
+                  id="passcode"
+                  placeholder="Enter a passcode"
+                  required
+                />
+              </div>
+            </div>
+            <br />
+            <div class="buttons">
+              <button
+                class="button is-block is-half is-primary is-medium is-rounded"
+                onclick="onLogin()"
+              >
+                Login
+              </button>
+              <button
+                class="button is-block is-half is-primary is-medium is-rounded"
+                onclick="onSignUp()"
+              >
+                Sign Up
+              </button>
+            </div>
+          </form>
+          <br />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
